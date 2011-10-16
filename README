@@ -1,0 +1,19 @@
+Script to upload special prepared emails into gmail account with help imap_uploader.py script.
+
+To see help type
+
+$ python imap_worker.py --help
+
+Example of usage:
+
+- Uploading 100 per day existing emails in eml format stored in directory emails
+
+$ python imap_worker.py -u user@gmail.com -p 123456 -n 100 -d path/emails
+
+- Uploading 100 per day generated emails
+
+$ python imap_worker.py -u user@gmail.com -p 123456 -n 100
+
+The script can continue uploading if it was interrupted.
+
+Detailed information about imap-uploader.py one can find at http://imap-upload.sourceforge.net/
