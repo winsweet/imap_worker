@@ -60,8 +60,8 @@ def upload_mailbox(filename, user, password):
     import subprocess as sp
 
     error_filename = '%s.err' % filename
-    cmd = 'python imap_upload.py --gmail --user={0} --password={1} --error={2} {3}'.format(
-        user, password, error_filename, filename)
+    cmd = 'python imap_upload.py --gmail --box=test --user=' + user + ' --password=' + password + 
+        ' --error=' + error_filename + ' ' + filename
 
     p = sp.Popen(cmd, shell=True, stdout=sp.PIPE, stderr=sp.PIPE)
     (stdoutdata, stderrdata) = p.communicate()
